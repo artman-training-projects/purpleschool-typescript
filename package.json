@@ -1,0 +1,23 @@
+{
+	"name": "command-executor",
+	"version": "1.0.0",
+	"description": "",
+	"author": "Vladimir Artyukhov",
+	"license": "ISC",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"inquirer": "^9.1.4"
+	},
+	"devDependencies": {
+		"@types/inquirer": "^9.0.3",
+		"@types/node": "^18.11.10"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/artman-training-projects/purpleschool-typescript.git"
+	},
+	"homepage": "https://github.com/artman-training-projects/purpleschool-typescript#readme"
+}
