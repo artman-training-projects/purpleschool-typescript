@@ -16,9 +16,7 @@ export abstract class CommandExecutor<Input> {
 
 	protected abstract build(input: Input): ICommandExecutor;
 
-	protected abstract spawn(
-		command: ICommandExecutor
-	): ChildProcessWithoutNullStreams;
+	protected abstract spawn(command: ICommandExecutor): ChildProcessWithoutNullStreams;
 
 	protected abstract processStream(
 		stream: ChildProcessWithoutNullStreams,

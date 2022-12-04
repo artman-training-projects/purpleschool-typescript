@@ -6,11 +6,11 @@ export class StreamHandler {
 
 	processOutput(stream: ChildProcessWithoutNullStreams) {
 		stream.stdout.on("data", (data: any) => {
-			this.logger.log(data);
+			this.logger.log(data.toString());
 		});
 
 		stream.stdout.on("data", (data: any) => {
-			this.logger.error(data);
+			this.logger.error(data.toString());
 		});
 
 		stream.stdout.on("close", () => {
