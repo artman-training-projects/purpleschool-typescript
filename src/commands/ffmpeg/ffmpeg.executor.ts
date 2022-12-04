@@ -1,10 +1,10 @@
 import { ChildProcessWithoutNullStreams, spawn } from "child_process";
-import { CommandExecutor } from "../../core/executor/command.executor";
-import { FileService } from "../../core/files/file.service";
+import { CommandExecutor } from "../../core/executor/command.executor.js";
+import { FileService } from "../../core/files/file.service.js";
 import { IStreamLogger } from "../../core/handlers/stream-logger.interface";
-import { StreamHandler } from "../../core/handlers/stream.handler";
-import { PromptService } from "../../core/prompt/prompt.service";
-import { FfmpegBuilder } from "./ffmpeg.builder";
+import { StreamHandler } from "../../core/handlers/stream.handler.js";
+import { PromptService } from "../../core/prompt/prompt.service.js";
+import { FfmpegBuilder } from "./ffmpeg.builder.js";
 import { ICommandExecutorFfmpeg, IFfmpegInput } from "./ffmpeg.interfaces";
 
 export class FfmpegExecutor extends CommandExecutor<IFfmpegInput> {
@@ -20,7 +20,7 @@ export class FfmpegExecutor extends CommandExecutor<IFfmpegInput> {
 		const width = await this.promptService.input<number>("Ширина", "number");
 		const height = await this.promptService.input<number>("Высота", "number");
 		const path = await this.promptService.input<string>("Путь для файла", "input");
-		const name = await this.promptService.input<string>("Высота", "input");
+		const name = await this.promptService.input<string>("Имя файла", "input");
 
 		return { width, height, path, name };
 	}
