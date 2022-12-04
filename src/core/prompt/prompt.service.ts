@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { TPromptType } from "./prompt.types";
+import { TPromptType } from "./prompt.interfaces";
 
 export class PromptService {
 	public async input<T>(message: string, type: TPromptType) {
